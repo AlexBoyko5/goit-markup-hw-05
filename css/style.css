@@ -540,7 +540,7 @@ address {
     height: 584px;
     border-radius: 4px;
     background: var(--DAIRY, #FCFCFC);
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -549,8 +549,14 @@ address {
 
 .modal-btn {
     position: absolute;
-    right: 24px;
+    width: 24px;
+    height: 24px;
+    fill: var(--CORNFLOWER, #E7E9FC);
+    stroke-width: 1px;
+    stroke: rgba(0, 0, 0, 0.10);
+    padding: 8;
     top: 24px;
+    right: 24px;
 }
 
 .modal-btn-icon {}
@@ -565,26 +571,26 @@ address {
     margin-bottom: 16px;
 }
 
-.modal-form {}
-
-.modal-group {
+.modal-form {
     display: flex;
     width: 360px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 4px;
-    width: 100%;
-}
-
-.modal-input {
-    width: 360px;
-    height: 58px;
+    gap: 8px;
     border-radius: 4px;
-    border: 1px solid var(--IRIS, #4D5AE5);
-    margin-bottom: 26px;
+    border: 1px solid #000;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-
+.modal-group {
+    display: flex;
+    /*width: 360px;*/
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 8px;
+}
 
 .modal-label {
     display: block;
@@ -594,4 +600,32 @@ address {
     font-weight: 400;
     line-height: 1.16;
     letter-spacing: 0.03em;
+    margin-bottom: 4px;
+}
+
+.modal-input {
+    width: 360px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid var(--IRIS, #4D5AE5);
+}
+
+.modal-text {
+    width: 360px;
+    height: 120px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    border: 1px solid var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
+}
+
+.send-btn {
+    display: flex;
+    color: var(--WHITE, #FFF);
+    text-align: center;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
 }
