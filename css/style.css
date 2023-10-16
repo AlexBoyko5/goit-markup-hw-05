@@ -799,7 +799,7 @@ address {
     margin-right: 8px;
 }
 
-.user-privacy:checked+.span-privacy {
+.user-privacy:checked+.modal-privacy span {
     background-color: #404BBF;
     border: none;
     fill: #F4F4FD;
