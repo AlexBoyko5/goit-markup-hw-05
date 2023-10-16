@@ -800,7 +800,7 @@ address {
 }
 
 .user-privacy:checked+.modal-privacy span {
-    background-color: #404BBF;
+    background-color: #404bbf;
     border: none;
     fill: #F4F4FD;
 }
