@@ -398,6 +398,19 @@
 				</ul>
 			</div>
 		</div>
+		<!--===FOOTER-FORM==============================*-->
+		<div class="footer-subs">
+			<p class="form-pf">Subscribe</p>
+			<form class="footer-form">
+				<label for=""></label>
+				<input type="email" placeholder="E-mail" class="footer-input">
+				<button type="button" class="subs-btn">Subscribe
+					<svg width="24" height="24" class="subs-icon">
+						<use href="./images/icons.svg#icon-Frame-3"></use>
+					</svg>
+				</button>
+			</form>
+		</div>
 	</footer>
 
 	<!--===BACKDROP==============================*-->
@@ -439,9 +452,28 @@
 						</svg>
 					</div>
 				</div>
+
+				<!--===TEXT-AREA================================-->
 				<div class="modal-group-text">
-					<label for="user-text" class="modal-label">Comment</label>
-					<textarea name="user-text" id="user-text" class="modal-text"></textarea>
+					<label for="user-comment" class="modal-label">Comment</label>
+					<div class="comment-input">
+						<textarea name="user-comment" id="user-comment" class="user-comment"
+							placeholder="Text input"></textarea>
+					</div>
+
+					<!--===CHECK-BOX================================-->
+					<div class="check-box-place">
+						<input type="checkbox" name="user-privacy" class="user-privacy 
+							visually-hidden" id="user-privacy" value="true">
+						<label for="user-privacy" class="modal-privacy">
+							<span class="span-privacy">
+								<svg class="privacy-icon" width="10" height="10">
+									<use href="./images/icons.svg#icon-Checkbox-active"></use>
+								</svg>
+							</span>I accept the terms and conditions of the
+							<a href="" class="link-privacy">Privacy Policy</a>
+						</label>
+					</div>
 					<button type="button" class="send-btn">Send</button>
 				</div>
 			</form>

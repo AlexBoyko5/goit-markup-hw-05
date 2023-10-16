@@ -521,17 +521,79 @@ address {
     background-color: #31d0aa;
 }
 
+/**===FOOTER-FORM==============================*/
+
+.footer-subs {}
+
+.form-pf {
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+}
+
+.footer-form {
+    display: flex;
+    gap: 24px;
+    margin: 0 auto;
+}
+
+.footer-input {
+    width: 264px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid var(--WHITE, #FFF);
+    background-color: transparent;
+    line-height: 1.5;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    padding-left: 16px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    color: #ffffff;
+}
+
+.subs-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    min-width: 165px;
+    height: 40px;
+    padding: 16px 32px;
+    color: var(--WHITE, #FFF);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    background-color: #4D5AE5;
+    border: none;
+    border-radius: 4px;
+}
+
+.subs-icon {
+    margin-left: 16px;
+}
+
 /**===BACKDROP==============================*/
 .backdrop {
     position: fixed;
     width: 100%;
     height: 100%;
-    border-color: rgba(46, 47, 66, 0.4);
+    background-color: rgba(46, 47, 66, 0.4);
     filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.14)) drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.12)) drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.20));
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
     top: 0;
     left: 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 
 /**===MODAL================================*/
 .modal {
@@ -543,7 +605,9 @@ address {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.14)) drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.12)) drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.20));
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     padding: 72px 24px 24px 24px;
 }
@@ -552,15 +616,32 @@ address {
     position: absolute;
     width: 24px;
     height: 24px;
-    fill: var(--CORNFLOWER, #E7E9FC);
+    background-color: #e7e9fc;
     stroke-width: 1px;
     stroke: rgba(0, 0, 0, 0.10);
     padding: 8px;
     top: 24px;
     right: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-btn-icon {}
+.modal-btn:hover {
+    background-color: #404bbf;
+    border: none;
+}
+
+.modal-btn:focus {
+    background-color: #404bbf;
+    border: none;
+}
+
 
 .modal-title {
     color: var(--NAVY-BLUE, #2E2F42);
@@ -602,14 +683,18 @@ address {
 
 .modal-input {
     position: relative;
-    border-radius: 4px;
-    border: 1px solid var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
-    outline: transparent;
 }
 
 .input-content {
     width: 360px;
     height: 40px;
+    border-radius: 4px;
+    border: 1px solid var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
+    background-color: transparent;
+    outline: transparent;
+    padding-left: 38px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .modal-input:focus {
@@ -620,11 +705,11 @@ address {
     fill: #4D5AE5;
 }
 
-.modal-input :hover {
+/*.modal-input :hover {
     border-color: #4D5AE5;
 }
 
-/*.modal-icon:focus {
+.modal-icon:focus {
     fill: #4D5AE5;
 }
 
@@ -637,29 +722,109 @@ address {
     transform: translateY(-50%);
     left: 16px;
     top: 50%;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+/**====Textarea=====================*/
 
 .modal-group-text {
     height: 138px;
+    width: 100%;
+    margin-bottom: 16px;
 }
 
-.modal-text {
-    width: 360px;
+.user-comment {
+    width: 100%;
     height: 120px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+    background-color: transparent;
+    padding: 8px 16px;
+    outline: transparent;
     border-radius: 4px;
     border: 1px solid var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
     resize: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.user-comment:focus {
+    border-color: #4D5AE5;
+}
+
+/**===Check-box==============*/
+
+.check-box-place {
+    margin-bottom: 24px;
+}
+
+.modal-privacy {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+}
+
+.user-privacy {}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.span-privacy {
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 2px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    fill: transparent;
+    margin-right: 8px;
+}
+
+.user-privacy:checked+.span-privacy {
+    background-color: #404BBF;
+    border: none;
+    fill: #F4F4FD;
+}
+
+.link-privacy {
+    color: #4d5ae5;
 }
 
 .send-btn {
+    display: block;
     margin: 0 auto;
-    display: flex;
+    min-width: 169px;
+    height: 56px;
+    padding: 16px 32px;
     color: var(--WHITE, #FFF);
-    text-align: center;
-    font-family: Roboto;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    font-style: normal;
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.04em;
+    cursor: pointer;
+    background-color: #4D5AE5;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
