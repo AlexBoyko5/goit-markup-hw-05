@@ -801,8 +801,8 @@ address {
 
 .user-privacy:checked+.modal-privacy span {
     background-color: #404bbf;
+    fill: #f4f4fd;
     border: none;
-    fill: #F4F4FD;
 }
 
 .link-privacy {
