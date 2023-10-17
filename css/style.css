@@ -807,6 +807,10 @@ address {
     fill: #f4f4fd;
 }
 
+.privacy-icon {
+    fill: #F4F4FD;
+}
+
 .link-privacy {
     color: #4d5ae5;
 }
