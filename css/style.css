@@ -523,7 +523,9 @@ address {
 
 /**===FOOTER-FORM==============================*/
 
-.footer-subs {}
+.footer-subs {
+    margin-left: 80px;
+}
 
 .form-pf {
     margin-bottom: 16px;
@@ -538,6 +540,10 @@ address {
     display: flex;
     gap: 24px;
     margin: 0 auto;
+}
+
+.footer-form-label {
+    gap: 24px;
 }
 
 .footer-input {
