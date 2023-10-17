@@ -798,10 +798,10 @@ address {
     margin-right: 8px;
 }
 
-.user-privacy:checked+.modal-privacy span {
+.user-privacy:checked+.modal-privacy .span-privacy {
     background-color: #404bbf;
-    fill: #f4f4fd;
     border: none;
+    fill: #f4f4fd;
 }
 
 .link-privacy {
